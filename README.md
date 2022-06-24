@@ -2,11 +2,15 @@
 <p align="center">Zero-boilerplate authentication support for Nuxt.js!</p>
 
 <p align="center">
-<a href="https://auth.nuxtjs.org">具体使用请参照官方文档</a>
+<a href="https://auth.nuxtjs.org">Refer to the document before usage(具体使用请参照官方文档)</a>
 </p>
 
-## 修改说明
-本项目在原项目基础上实现了cookie与localStorage节点的runtime配置，使用示例如下
+## Modify Remark
+The origin proect cant't support auth runtimeConfig. 
+So i have to build again and again when I deploy the site within different subdomains(eg https://xxx.com/a and https://xxx.com/b), what a waste of time!!!
+
+本项目在原项目基础上实现了cookie与localStorage节点的runtime配置，从而实现“一套代码、多处部署”，即使在同一个域名下也不会互相干扰。
+使用示例如下
 ```
 publicRuntimeConfig: {
 	auth: {
