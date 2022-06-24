@@ -2,32 +2,27 @@
 <p align="center">Zero-boilerplate authentication support for Nuxt.js!</p>
 
 <p align="center">
-<a href="https://david-dm.org/nuxt-community/auth-module">
-    <img alt="" src="https://david-dm.org/nuxt-community/auth-module/status.svg?style=flat-square">
-</a>
-<a href="https://standardjs.com">
-    <img alt="" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square">
-</a>
-<a href="https://circleci.com/gh/nuxt-community/auth-module">
-    <img alt="" src="https://img.shields.io/circleci/project/github/nuxt-community/auth-module.svg?style=flat-square">
-</a>
-<a href="https://codecov.io/gh/nuxt-community/auth-module">
-    <img alt="" src="https://img.shields.io/codecov/c/github/nuxt-community/auth-module.svg?style=flat-square">
-</a>
-<br>
-<a href="https://npmjs.com/package/@nuxtjs/auth-next">
-    <img alt="" src="https://img.shields.io/npm/v/@nuxtjs/auth-next/latest.svg?style=flat-square">
-</a>
-<a href="https://npmjs.com/package/@nuxtjs/auth">
-    <img alt="" src="https://img.shields.io/npm/dt/@nuxtjs/auth-next.svg?style=flat-square">
-</a>
+<a href="https://auth.nuxtjs.org">具体使用请参照官方文档</a>
 </p>
 
-<p align="center">
-<a href="https://auth.nuxtjs.org">Read Documentation</a>
-</p>
-
-**🚧 please see [status page](http://auth.nuxtjs.org/status) in documentation.**
+## 修改说明
+本项目在原项目基础上实现了cookie与localStorage节点的runtime配置，使用示例如下
+```
+publicRuntimeConfig: {
+	auth: {
+	  cookie: {
+		prefix: 'test.',
+		options: {
+		  path: '/',
+		  maxAge: 2 * 3600
+		}
+	  },
+	  localStorage: {
+		prefix: 'test.'
+	  }
+	}
+}
+```
 
 ## Development
 

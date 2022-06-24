@@ -1,6 +1,6 @@
 {
-  "name": "@nuxtjs/auth-wensaint",
-  "version": "1.0.2",
+  "name": "nuxt-auth-wensaint",
+  "version": "1.0.0",
   "description": "Authentication module for Nuxt.js",
   "repository": "wensaint/auth-module",
   "license": "MIT",
@@ -33,7 +33,8 @@
     "heroku-postbuild": "nuxt build demo",
     "lint": "eslint --ext .ts,.js,.vue . && prettier --check .",
     "lint-fix": "eslint --ext .ts,.js,.vue --fix . && prettier --write .",
-    "release": "yarn build && standard-version && git push --follow-tags && npm publish",
+    "publish": "npm publish --access public",
+    "release": "yarn build && git push --follow-tags && npm publish --access public",
     "start": "nuxt start demo",
     "test": "yarn lint && jest"
   },
