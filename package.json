@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/auth-wensaint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Authentication module for Nuxt.js",
   "repository": "wensaint/auth-module",
   "license": "MIT",
