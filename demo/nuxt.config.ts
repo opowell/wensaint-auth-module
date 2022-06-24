@@ -159,5 +159,19 @@ export default <NuxtConfig>{
         }
       }
     }
+  },
+  publicRuntimeConfig: {
+    auth: {
+      cookie: {
+        prefix: 'test.',
+        options: {
+          path: '/',
+          maxAge: 2 * 3600
+        }
+      },
+      localStorage: {
+        prefix: 'test.'
+      }
+    }
   }
 }

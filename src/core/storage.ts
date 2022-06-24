@@ -26,8 +26,15 @@ export class Storage {
 
   constructor(ctx: Context, options: StorageOptions) {
     this.ctx = ctx
-    this.options = options
-
+    // this.options = options
+    // add runtimeconfig support by wensaint
+    this.options = {
+      ...options,
+      ...(this.ctx.$config && this.ctx.$config.auth)
+    }
+    // this.options = Object.assign(options, {
+    //   ...this.ctx.$config.auth
+    // })
     this._initState()
   }
 
@@ -135,7 +142,7 @@ export class Storage {
       // eslint-disable-next-line no-console
       console.warn(
         '[AUTH] The Vuex Store is not activated. This might cause issues in auth module behavior, like redirects not working properly.' +
-          'To activate it, see https://nuxtjs.org/docs/2.x/directory-structure/store'
+        'To activate it, see https://nuxtjs.org/docs/2.x/directory-structure/store'
       )
     }
   }
@@ -350,7 +357,7 @@ export class Storage {
         // eslint-disable-next-line no-console
         console.warn(
           "[AUTH] Local storage is enabled in config, but browser doesn't" +
-            ' support it'
+          ' support it'
         )
       }
       return false
@@ -375,7 +382,7 @@ export class Storage {
       // eslint-disable-next-line no-console
       console.warn(
         "[AUTH] Cookies is enabled in config, but browser doesn't" +
-          ' support it'
+        ' support it'
       )
       return false
     }
